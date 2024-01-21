@@ -15,5 +15,6 @@
 *.grd
 *.lg
 details.out
+SMS.RData
 */*
 
