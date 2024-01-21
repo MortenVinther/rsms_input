@@ -13,5 +13,7 @@
 *.cov
 *.zip
 *.Rproj
+*.grd
+*.lg
 */*
 
