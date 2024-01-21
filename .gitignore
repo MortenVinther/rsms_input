@@ -7,7 +7,6 @@
 *.obj
 *.htp
 *.log
-*.out
 *.cor
 *.hes
 *.cov
@@ -15,5 +14,6 @@
 *.Rproj
 *.grd
 *.lg
+details.out
 */*
 
