@@ -1,0 +1,175 @@
+SMS version 2023-11-29, using ADMB version 13.1
+January 12, 2024 20:49:16
+no. of species: 27  no. of predators: 20  no. of other predators:15
+first VPA species no.:16  first VPA species as prey:16
+n_log_F_a_ini:179
+PRELIMINARY_CALCS_SECTION initiated
+
+observed min predator prey size ratio: 
+                  Cod        Whiting    Haddock    Saithe     Mackerel   Herring    N.sandeel  S.sandeel  Nor.pout   Sprat      Plaice     Sole       
+Fulmar           280.1      357.1      364.2          .          .      111.3      402.3      402.3      277.0      311.3          .          .
+Guillemot            .       66.5      142.7          .          .      156.2      383.1      383.1          .      283.4          .          .
+Her.Gull         280.1      357.1      364.2          .          .       28.6      435.5      435.5      277.0      311.3          .          .
+Kittiwake        280.1      357.1      364.2          .          .       49.4      402.3      402.3          .      547.0          .          .
+GBB.Gull         280.1      357.1      364.2          .          .       28.6      402.3      402.3      277.0      311.3          .          .
+Gannet            12.6          .          .          .          .       17.6      402.3      402.3          .      156.2          .          .
+Puffin               .          .          .          .          .      547.0      402.3      402.3          .      547.0          .          .
+Razorbill            .       79.3          .          .          .      547.0      950.6      950.6      252.5      461.3          .          .
+A.radiata         46.5       46.5          .          .          .          .       53.8       59.2       37.0          .          .          .
+G.gurnards         9.0        5.3       19.8          .          .        8.3       11.6       11.6        8.3       35.1          .          .
+W.horse.mac          .          .          .          .          .          .       69.3          .       72.6          .          .          .
+N.horse.mac          .       53.5          .          .          .       15.9       94.0          .          .       40.0          .          .
+Grey.seal          3.3       16.0       10.8          .          .       31.5      261.3      261.3      112.8          .       15.9          .
+H.porpoise         4.9       16.0          .          .          .       31.5      261.3      261.3     1803.3          .          .          .
+Hake                 .      283.2          .          .          .        7.8          .          .        4.9          .          .          .
+Cod                3.6        4.5        7.0          .          .        2.7        5.5        2.7        4.2       11.3          .          .
+Whiting            4.4        2.7        3.0          .          .        2.3        2.3        2.2        1.8        2.5          .          .
+Haddock              .          .          .          .          .          .        4.2      132.3        8.7          .          .          .
+Saithe               .       13.1       13.0          .          .        4.3       26.6          .        4.7          .          .          .
+Mackerel             .          .          .          .          .       24.2       36.5        6.1       27.5       15.1          .          .
+
+observed max predator prey size ratio: 
+                  Cod        Whiting    Haddock    Saithe     Mackerel   Herring    N.sandeel  S.sandeel  Nor.pout   Sprat      Plaice     Sole       
+Fulmar            1305        984        472          .          .        453       8621       8621       1416       4673          .          .
+Guillemot            .        541        466          .          .       1645       5263       5263          .       4673          .          .
+Her.Gull          2033       2747        929          .          .        119       2825       2825       2262       4673          .          .
+Kittiwake         1305       1748        821          .          .        453       8621       8621          .       4673          .          .
+GBB.Gull          2033       2747        929          .          .        119       5263       5263       2262       4673          .          .
+Gannet              39          .          .          .          .        118       8621       8621          .        758          .          .
+Puffin               .          .          .          .          .       1645       8621       8621          .       4673          .          .
+Razorbill            .        512          .          .          .       1645       8621       8621        728       4673          .          .
+A.radiata         1028        178          .          .          .          .       3526        791       1431          .          .          .
+G.gurnards         308        422         97          .          .         25       1056        939        429        391          .          .
+W.horse.mac          .          .          .          .          .          .        517          .        321          .          .          .
+N.horse.mac          .        243          .          .          .         80        308          .          .        101          .          .
+Grey.seal          789       1017        276          .          .        896       7534       4314       1803          .       1657          .
+H.porpoise        2355       7857          .          .          .       1667       7534       5140       7971          .          .          .
+Hake                 .        283          .          .          .         78          .          .       1489          .          .          .
+Cod                720       3103       1645          .          .       1502       6481       6481       4394       4278          .          .
+Whiting            103        377        133          .          .        124        717        542        384        708          .          .
+Haddock              .          .          .          .          .          .       1814        132        736          .          .          .
+Saithe               .       1014        953          .          .        535       2370          .       1653          .          .          .
+Mackerel             .          .          .          .          .        226       1332        595        700        454          .          .
+
+                  Cod        Whiting    Haddock    Saithe     Mackerel   Herring    N.sandeel  S.sandeel  Nor.pout   Sprat      Plaice     Sole       
+Fulmar     
+Guillemot  
+Her.Gull   
+Kittiwake  
+GBB.Gull   
+Gannet     
+Puffin     
+Razorbill  
+A.radiata  
+G.gurnards 
+W.horse.mac
+N.horse.mac
+Grey.seal  
+H.porpoise 
+Hake       
+Cod        
+Whiting    
+Haddock    
+Saithe     
+Mackerel    ALK exist for all prey length classes
+
+Adjusted min predator prey size ratio (according to option max.prey.pred.size.fac), to be used for calculation of M2: 
+                  Cod        Whiting    Haddock    Saithe     Mackerel   Herring    N.sandeel  S.sandeel  Nor.pout   Sprat      Plaice     Sole       
+Fulmar           280.1      357.1      364.2          .          .      111.3      402.3      402.3      277.0      311.3          .          .      111.3
+Guillemot            .       66.5      142.7          .          .      156.2      383.1      383.1          .      283.4          .          .       66.5
+Her.Gull         280.1      357.1      364.2          .          .       28.6      435.5      435.5      277.0      311.3          .          .       28.6
+Kittiwake        280.1      357.1      364.2          .          .       49.4      402.3      402.3          .      547.0          .          .       49.4
+GBB.Gull         280.1      357.1      364.2          .          .       28.6      402.3      402.3      277.0      311.3          .          .       28.6
+Gannet            12.6          .          .          .          .       17.6      402.3      402.3          .      156.2          .          .       12.6
+Puffin               .          .          .          .          .      547.0      402.3      402.3          .      547.0          .          .      402.3
+Razorbill            .       79.3          .          .          .      547.0      950.6      950.6      252.5      461.3          .          .       79.3
+A.radiata         46.5       46.5          .          .          .          .       53.8       59.2       37.0          .          .          .       37.0
+G.gurnards         9.0        5.3       19.8          .          .        8.3       11.6       11.6        8.3       35.1          .          .        5.3
+W.horse.mac          .          .          .          .          .          .       69.3          .       72.6          .          .          .       69.3
+N.horse.mac          .       53.5          .          .          .       15.9       94.0          .          .       40.0          .          .       15.9
+Grey.seal          3.3       16.0       10.8          .          .       31.5      261.3      261.3      112.8          .       15.9          .        3.3
+H.porpoise         4.9       16.0          .          .          .       31.5      261.3      261.3     1803.3          .          .          .        4.9
+Hake                 .      283.2          .          .          .        7.8          .          .        4.9          .          .          .        4.9
+Cod                3.6        4.5        7.0          .          .        2.7        5.5        2.7        4.2       11.3          .          .        2.7
+Whiting            4.4        2.7        3.0          .          .        2.3        2.3        2.2        1.8        2.5          .          .        1.8
+Haddock              .          .          .          .          .          .        4.2      132.3        8.7          .          .          .        4.2
+Saithe               .       13.1       13.0          .          .        4.3       26.6          .        4.7          .          .          .        4.3
+Mackerel             .          .          .          .          .       24.2       36.5        6.1       27.5       15.1          .          .        6.1
+
+
+Min observed stomach contents observations to be used:  9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-05 9.000e-09 9.000e-09 9.000e-09 9.000e-09 9.000e-05 9.000e-05
+
+Species, number of stomachs observations totally, and used
+Fulmar                             363    342
+Guillemot                          428    424
+Her.Gull                           419    406
+Kittiwake                          334    334
+GBB.Gull                           519    510
+Gannet                             306    306
+Puffin                             276    276
+Razorbill                          300    288
+A.radiata                          138    125
+G.gurnards                         332    306
+W.horse.mac                         21    19
+N.horse.mac                         40    40
+Grey.seal                          630    491
+H.porpoise                         112    106
+Hake                                50    50
+Cod                               2328    2328
+Whiting                           1460    1460
+Haddock                            254    254
+Saithe                             464    447
+Mackerel                           222    205
+
+Number of predator-prey interaction observation used
+                  Cod        Whiting    Haddock    Saithe     Mackerel   Herring    N.sandeel  S.sandeel  Nor.pout   Sprat      Plaice     Sole       
+Fulmar              32         30          8          0          0         40         50         50         44         64          0          0
+Guillemot            0         78         14          0          0         56         84         84          0         84          0          0
+Her.Gull            30         54         44          0          0         72         20         20         64         78          0          0
+Kittiwake           24         24         22          0          0         40         78         78          0         44          0          0
+GBB.Gull            54         52         44          0          0         72         60         60         66         78          0          0
+Gannet              46          0          0          0          0         96         50         50          0         40          0          0
+Puffin               0          0          0          0          0         28         94         94          0         36          0          0
+Razorbill            0         40          0          0          0         28         56         56         28         62          0          0
+A.radiata            6          4          0          0          0          0         57         12         24          0          0          0
+G.gurnards          19         47          7          0          0          2         75         63         47         12          0          0
+W.horse.mac          0          0          0          0          0          0          7          0          6          0          0          0
+N.horse.mac          0          7          0          0          0          7          2          0          0          5          0          0
+Grey.seal           93         73         69          0          0         37         51         47         38          0         71          0
+H.porpoise          30         30          0          0          0         12         14         13          4          0          0          0
+Hake                 0          1          0          0          0          7          0          0         27          0          0          0
+Cod                178        346        297          0          0        316        359        206        347        151          0          0
+Whiting             28        140        100          0          0        136        263        212        265        218          0          0
+Haddock              0          0          0          0          0          0        124          2         76          0          0          0
+Saithe               0         39         70          0          0         48         45          0        189          0          0          0
+Mackerel             0          0          0          0          0         22         40         41         30         37          0          0
+
+PRELIMINARY_CALCS_SECTION done
+Starting optimization of 'sms' in phase 2 of 2 at Fri Jan 12 20:49:19 2024
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 0.02; max = 0.12
+variable out of bounds in boundpin: variable = 1; min = 1; max = 101
+phase= 2 | nvar=137 | iter=  0 | nll=1.03e+04 | mag=1.81e+05 | par[ 94]=vulnera[94]
+phase= 2 | nvar=137 | iter= 20 | nll=-1.99e+03 | mag=3.87e+04 | par[102]=vulnera[102]
+phase= 2 | nvar=137 | iter= 40 | nll=-2.50e+03 | mag=3.16e+04 | par[102]=vulnera[102]
+phase= 2 | nvar=137 | iter= 60 | nll=-2.63e+03 | mag=2.80e+04 | par[ 94]=vulnera[94]
+phase= 2 | nvar=137 | iter= 80 | nll=-2.64e+03 | mag=2.69e+04 | par[ 94]=vulnera[94]
+phase= 2 | nvar=137 | iter=100 | nll=-2.68e+03 | mag=2.60e+04 | par[102]=vulnera[102]
+phase= 2 | nvar=137 | iter=120 | nll=-2.86e+03 | mag=2.50e+04 | par[102]=vulnera[102]
+phase= 2 | nvar=137 | iter=140 | nll=-3.12e+03 | mag=1.09e+04 | par[ 96]=vulnera[96]
+phase= 2 | nvar=137 | iter=160 | nll=-3.47e+03 | mag=4.51e+03 | par[102]=vulnera[102]
+phase= 2 | nvar=137 | iter=180 | nll=-3.53e+03 | mag=1.03e+03 | par[ 94]=vulnera[94]
+phase= 2 | nvar=137 | iter=200 | nll=-3.54e+03 | mag=1.12e+01 | par[101]=vulnera[101]
+phase= 2 | nvar=137 | iter=220 | nll=-3.54e+03 | mag=3.71e-03 | par[102]=vulnera[102]
+report file: sms.rep
+
+
+Successful completion, HURRAH - HURRAH 
+
+Finished running model 'sms' after 5.2 s.
