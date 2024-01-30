@@ -112,11 +112,11 @@
 10 1 8 0 10 1 1 0 2 0 0  # 20 Mackerel 
  8 0 5 0  8 1 0 1 1 0 0  # 21 Herring 
 4 0 3 0 4 1 0 1 1 0 0  # 22 N.sandeel 
-4 0 3 0 4 1 0 1 1 0 0  # 23 S.sandeel 
-3 0 2 0 3 0 0 1 0 0 0  # 24 Nor.pout 
-3 1 2 0 3 1 0 1 0 0 0  # 25 Sprat 
-10 1 7 0 10 1 0 0 1 0 0  # 26 Plaice 
-10 1 7 0 10 1 0 0 1 0 0  # 27 Sole 
+4 0 3 0 4 1 0 1 0 0 0  # 23 S.sandeel 
+3 0 2 0 3 0 0 1 1 0 0  # 24 Nor.pout 
+3 1 2 0 3 1 0 1 1 0 0  # 25 Sprat 
+10 1 7 0 10 1 0 0 0 0 0  # 26 Plaice 
+10 1 7 0 10 1 0 0 0 0 0  # 27 Sole 
 ########################################
 ## use input recruitment estimate (option use.known.rec)
 #   0=estimate all recruitments
@@ -219,7 +219,7 @@
 ## 
 # catch observations: number of separate catch variance groups by species 
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           3           3           4           3           2           3           3           3           3           2           3           3
+           3           3           4           3           2           3           2           3           3           2           3           3
 #  first age group in each catch variance group 
 1 2 7  	#  Cod 
 0 1 2  	#  Whiting 
@@ -227,7 +227,7 @@
 3 5 8 	#  Saithe 
 1 2 #  Mackerel 
 0 1 8 	#  Herring 
-0 1 4 	#  N.sandeel 
+0 1  	#  N.sandeel 
 0 1 3	#  S.sandeel 
 0 1 3 	#  Nor.pout 
 1 3 	#  Sprat 
@@ -237,20 +237,20 @@
 ## 
 # catch observations: number of separate catch seasonal component groups by species %%%%%%%%%% BRUGT TIL RANDOM WALK F 
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           3           5           3           2            2          2           2           3           2           2           2           2
+           3           5           3           2            7          5           4           4           3           2           2           2
 #  first ages in each seasonal component group by species 
 1 2 3  	#  Cod 
 0 1 2 3  4 	#  Whiting 
 0 1 2 	#  Haddock 
 3 4 	#  Saithe 
-1 2 	#  Mackerel 
-0 1 	#  Herring 
-0 1  	#  N.sandeel 
-0 1 3 	#  S.sandeel 
-0 1  	#  Nor.pout 
-1 2  	#  Sprat 
+1 2 3 4 5 6 7 	#  Mackerel 
+0 1 2 3 4	#  Herring 
+0 1 2 3	#  N.sandeel 
+0 1 2 3 #  S.sandeel 
+0 1 2	#  Nor.pout 
+1 2 	#  Sprat 
 1 2 	#  Plaice 
-1 2	#  Sole 
+1 2 	#  Sole 
 ########################################
 ## first and last age in calculation of average F by species (option avg.F.ages)
 2 4  # Cod 
@@ -283,7 +283,7 @@
 ## 
 # catch observations: number of year groups with the same age and seasonal selection %%%%% BRUGT TIL PROCESS N sd groups
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           2           2           3           3           2         2           2           2           2           2           2           2
+           2           2           3           3           2         2           3           2           2           2           2           2
 #  first year in each group (please note #1 will always be changed to first model year) 
 # first age in sd group
 0 1	#  Cod 
@@ -292,10 +292,10 @@
 0 1 3	#  Saithe 
 0  1	#  Mackerel 
 0 1 	#  Herring 
-0 1 	#  N.sandeel 
-0 1 	#  S.sandeel 
-0 1 	#  Nor.pou
-0 1 	#  Sprat 
+0 1 2	#  N.sandeel 
+0 2	#  S.sandeel 
+0 1 	#  Nor.pout
+0 1	#  Sprat 
 0 1 	#  Plaice 
 0 1	#  Sole 
 ########################################
