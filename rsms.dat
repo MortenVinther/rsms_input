@@ -81,14 +81,14 @@
 # 6. plus group, 0=no plus group, 1=plus group
 # 7. predator species, 0=no, 1=VPA predator, 2=Other predator 
 # 8. prey species, 0=no, 1=yes
-# 9. Stock Recruit relation  %%%%% RSMS
+# 9. Stock Recruit relation  %%%%%%%%%%%%%%%%%%%%%%%%%%%% RSMS
 #      0_random wal 1=Ricker, 2=Beverton & Holt, 3=Geom mean,
 #      4= Hockey stick, 5=hockey stick with smoother,
 #      51=Ricker with estimated temp effect,
 #      52=Ricker with known temp effect,
 #      >100= hockey stick with known breakpoint (given as input)
 # 10. Spawning season (not used yet, but set to 1)
-# 11. Additional data for Stock Recruit relation
+# 11. Additional data for Stock Recruit relation  %%%%%%%%%%%%%%%%%%%%%% RSMS BRUGT TIL rho (1=use, 0, no use) 
 ##
 1 0 0 0 0 0 2 0 0 0 0  # 1 Fulmar 
 1 0 0 0 0 0 2 0 0 0 0  # 2 Guillemot 
@@ -105,18 +105,18 @@
 1 0 0 0 0 0 2 0 0 0 0  # 13 Grey.seal 
 1 0 0 0 0 0 2 0 0 0 0  # 14 H.porpoise 
 9 0 0 0 0 0 2 0 0 0 0  # 15 Hake 
-10 1 8 0 10 1 1 1 1 0 0  # 16 Cod 
- 6 0 4 0  6 1 1 1 2 0 0  # 17 Whiting 
+10 1 8 0 10 1 1 1 1 0 1  # 16 Cod 
+ 6 0 4 0  6 1 1 1 2 0 1  # 17 Whiting 
 10 0 6 0 10 1 1 1 0 0 0  # 18 Haddock 
 10 3 9 0 10 1 1 0 0 0 0  # 19 Saithe 
-10 1 8 0 10 1 1 0 2 0 0  # 20 Mackerel 
- 8 0 5 0  8 1 0 1 1 0 0  # 21 Herring 
-4 0 3 0 4 1 0 1 1 0 0  # 22 N.sandeel 
+10 1 8 0 10 1 1 0 2 0 1  # 20 Mackerel 
+ 8 0 5 0  8 1 0 1 1 0 1  # 21 Herring 
+4 0 3 0 4 1 0 1 3 0 0  # 22 N.sandeel 
 4 0 3 0 4 1 0 1 1 0 0  # 23 S.sandeel 
 3 0 2 0 3 0 0 1 1 0 0  # 24 Nor.pout 
 3 1 2 0 3 1 0 1 1 0 0  # 25 Sprat 
-10 1 7 0 10 1 0 0 0 0 0  # 26 Plaice 
-10 1 7 0 10 1 0 0 0 0 0  # 27 Sole 
+10 1 7 0 10 1 0 0 0 0 1  # 26 Plaice 
+10 1 7 0 10 1 0 0 0 0 1  # 27 Sole 
 ########################################
 ## use input recruitment estimate (option use.known.rec)
 #   0=estimate all recruitments
@@ -237,7 +237,7 @@
 ## 
 # catch observations: number of separate catch seasonal component groups by species %%%%%%%%%% BRUGT TIL RANDOM WALK F , keyLogFsta
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           3           5           3           2            7          5           3           3           3           2           2           2
+           3           5           3           2            7          5           2           2           2           2           2           2
 #  first ages in each seasonal component group by species 
 1 2 3  	#  Cod 
 0 1 2 3  4 	#  Whiting 
@@ -245,9 +245,9 @@
 3 4 	#  Saithe 
 1 2 3 4 5 6 7 	#  Mackerel 
 0 1 2 3 4	#  Herring 
-0 1 2 	#  N.sandeel 
-0 1 2  #  S.sandeel 
-0 1 2	#  Nor.pout 
+0 1  	#  N.sandeel 
+0 1    #  S.sandeel 
+0 1 	#  Nor.pout 
 1 2 	#  Sprat 
 1 2 	#  Plaice 
 1 2 	#  Sole 
@@ -281,7 +281,7 @@
              0           0           0           0           0           0           0           0           0           0           0           0 
 ########################################
 ## 
-# catch observations: number of year groups with the same age and seasonal selection %%%%% BRUGT TIL PROCESS N sd groups
+# catch observations: number of year groups with the same age and seasonal selection %%%%%%%%%%%%%%%%%%%%%% BRUGT TIL PROCESS N sd groups
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
            2           2           3           3           2         2           2           2           2           2           2           2
 #  first year in each group (please note #1 will always be changed to first model year) 
@@ -293,7 +293,7 @@
 0  1	#  Mackerel 
 0 1 	#  Herring 
 0 1 	#  N.sandeel 
-0 1	#  S.sandeel 
+0 1 	#  S.sandeel 
 0 1 	#  Nor.pout
 0 1 	#  Sprat 
 0 1 	#  Plaice 
