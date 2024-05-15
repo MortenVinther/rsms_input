@@ -16,5 +16,6 @@
 *.lg
 details.out
 SMS.RData
+rsms_input_all.Rdata
 */*
 
