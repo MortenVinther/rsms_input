@@ -5,20 +5,6 @@
 ########################################
 # Produce test output (option test.output)
 #  0 no test output
-#  1 output file sms.dat and  file fleet.info.dat as read in
-#  2 output all single species input files as read in
-#  3 output all multi species input files as read in
-#  4 output option overview
-#
-# 11 output between phases output
-# 12 output iteration (obj function) output
-# 13 output stomach parameters
-# 19 Both 11, 12 and 13
-#
-# Forecast options
-# 51 output hcr_option.dat file as read in
-# 52 output prediction output summary
-# 53 output prediction output detailed
 0
 ########################################
 # Single/Multispecies mode (option VPA.mode)
@@ -26,6 +12,7 @@
 # 1=multi species mode, but Z=F+M (used for initial food suitability parm. est.)
 # 2=multi species mode, Z=F+M1+M2
 0
+#
 #&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 #
 # single species parameters
@@ -64,7 +51,7 @@
 ########################################
 ## various information by species
 # 1. last age 
-# 2. first age where catch data are used (else F=0 assumed), First age if species is other predator 
+# 2. first age where catch data are used (else F=0 assumed), First age if species is other predator
 # 3. plus group, 0=no plus group, 1=plus group
 # 4. predator species, 0=no, 1=VPA predator, 2=Other predator 
 # 5. prey species, 0=no, 1=yes
@@ -73,150 +60,149 @@
 # 8. additional data2
 # 9. additional data3
 ##
- 1 0 0 	2 0 0    0 0 0  # 1 Fulmar 
- 1 0 0 	2 0 0    0 0 0 # 2 Guillemot 
- 1 0 0 	2 0 0 	 0 0 0 # 3 Her.Gull 
- 1 0 0 	2 0 0    0 0 0 # 4 Kittiwake 
- 1 0 0 	2 0 0    0 0 0 # 5 GBB.Gull 
- 1 0 0 	2 0 0 	 0 0 0 # 6 Gannet 
- 1 0 0 	2 0 0    0 0 0 # 7 Puffin 
- 1 0 0 	2 0 0 	 0 0 0 # 8 Razorbill 
- 3 0 0 	2 0 0 	 0 0 0 # 9 A.radiata 
- 4 0 0 	2 0 0 	 0 0 0 # 10 G.gurnards 
- 3 0 0 	2 0 0 	 0 0 0 # 11 W.horse.mac 
- 6 0 0 	2 0 0 	 0 0 0 # 12 N.horse.mac 
- 1 0 0 	2 0 0 	 0 0 0 # 13 Grey.seal 
- 1 0 0 	2 0 0 	 0 0 0 # 14 H.porpoise 
- 9 0 0 	2 0 0 	 0 0 0 # 15 Hake 
-10 1 1 	1 1 1 	 0 1 0 # 16 Cod 
- 6 0 1 	1 1 1 	 0 1 0 # 17 Whiting 
-10 0 1 	1 1 1 	 0 0 0 # 18 Haddock 
-10 3 1 	1 0 1 	 0 0 0 # 19 Saithe 
-10 1 1 	1 0 1 	 0 1 0 # 20 Mackerel 
- 8 0 1 	0 1 1 	 0 1 0 # 21 Herring 
- 4 0 1 	0 1 1 	 0 0 0 # 22 N.sandeel 
- 4 0 1 	0 1 1 	 0 0 0 # 23 S.sandeel 
- 3 0 0 	0 1 1 	 0 0 0 # 24 Nor.pout 
- 3 1 1 	0 1 1	 0 0 0 # 25 Sprat 
-10 1 1 	0 0 1 	 0 1 0 # 26 Plaice 
-10 1 1 	0 0 1 	 0 1 0 # 27 Sole 
+1 0 0 2 0 0 0 0 0  # 1 Fulmar 
+1 0 0 2 0 0 0 0 0  # 2 Guillemot 
+1 0 0 2 0 0 0 0 0  # 3 Her.Gull 
+1 0 0 2 0 0 0 0 0  # 4 Kittiwake 
+1 0 0 2 0 0 0 0 0  # 5 GBB.Gull 
+1 0 0 2 0 0 0 0 0  # 6 Gannet 
+1 0 0 2 0 0 0 0 0  # 7 Puffin 
+1 0 0 2 0 0 0 0 0  # 8 Razorbill 
+3 0 0 2 0 0 0 0 0  # 9 A.radiata 
+4 0 0 2 0 0 0 0 0  # 10 G.gurnards 
+3 0 0 2 0 0 0 0 0  # 11 W.horse.mac 
+6 0 0 2 0 0 0 0 0  # 12 N.horse.mac 
+1 0 0 2 0 0 0 0 0  # 13 Grey.seal 
+1 0 0 2 0 0 0 0 0  # 14 H.porpoise 
+9 0 0 2 0 0 0 0 0  # 15 Hake 
+10 1 1 1 1 1 0 1 0  # 16 Cod 
+6 0 1 1 1 1 0 1 0  # 17 Whiting 
+10 0 1 1 1 1 0 0 0  # 18 Haddock 
+10 3 1 1 0 1 0 0 0  # 19 Saithe 
+10 1 1 1 0 1 0 1 0  # 20 Mackerel 
+8 0 1 0 1 1 0 1 0  # 21 Herring 
+4 0 1 0 1 1 0 0 0  # 22 N.sandeel 
+4 0 1 0 1 1 0 0 0  # 23 S.sandeel 
+3 0 0 0 1 1 0 0 0  # 24 Nor.pout 
+3 1 1 0 1 1 0 0 0  # 25 Sprat 
+10 1 1 0 0 1 0 1 0  # 26 Plaice 
+10 1 1 0 0 1 0 1 0  # 27 Sole 
 ########################################
-# Stock Recruit relation 
+# Stock Recruit relation
 #      0_random walk 1=Ricker, 2=Beverton & Holt, 3=Geom mean,
 #      4= Hockey stick, 5=hockey stick with smoother,
 #      >100= hockey stick with known breakpoint (given as input)
 #          Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           1             1          0           0            2           1           1           1           1           1           0           0 
+             1           1           0           0           2           1           1           1           1           1           0           0 
 ########################################
 ## minimum CV of catch observation used in ML-estimation (option min.catch.CV)
 0.1
 ########################################
-## use seasonal or annual catches (for input transformation only)
+## use seasonal or annual catches (for input transformation only)  (option combined.catches)
 #    0=annual catches with annual time steps or seasonal catches with seasonal time steps
 #    1=annual catches with seasonal time steps, assume seasonal catches=annual_catches/n_seasons
 #    2=annual catches with seasonal time steps, input seasonal proportions at age from file xx (not implemented yet)
 #          Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
              1           1           1           1           1           0           0           0           0           0           1           1 
 ########################################
-# Process noise: number of age  groups with the same process N 
+# Process noise: number of age  groups with the same process N by species 
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           2           2           3           3           2         2           2           2          2           2           2           2 
-# first age in sd group (option keyVarLogN)
-0 1	#  Cod 
+           2           2           3           3           2           2           2           2           2           2           2           2
+#  first age in sd group (option keyVarLogN) 
+0 1 	#  Cod 
 0 1 	#  Whiting 
-0 1 4	#  Haddock 
-0 1 3	#  Saithe 
-0 1	#  Mackerel 
+0 1 4 	#  Haddock 
+0 1 3 	#  Saithe 
+0 1 	#  Mackerel 
 0 1 	#  Herring 
-0 1	#  N.sandeel 
+0 1 	#  N.sandeel 
 0 1 	#  S.sandeel 
-0 1 	#  Nor.pout
+0 1 	#  Nor.pout 
 0 1 	#  Sprat 
 0 1 	#  Plaice 
-0 1	#  Sole 
+0 1 	#  Sole 
 ########################################
-## Model for F (default=1) (option fModel): 
-# 1=random walk (deafult SAM), 
-# 2=random walk used as year effect in separable F model
+## Model for F (default=1) (option fModel):
+#   1=random walk (deafult SAM)
+#   2=random walk used as year effect in separable F model
 #          Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-             1           1           1           1           1           1           1           1           1           1           1           1 
-############# 
-# number of separate age groups for use for random walk F stages (option keyLogFsta)
+             1           1           1           1           1           1           2           2           1           1           1           1 
+########################################
+# number of separate age groups for use for random walk F stages (option keyLogFsta) 
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           3           3           3           2            7          5          2         2            2           2           2           2
-#  first ages in each group by species (option keyLogFsta)
-1 2 3  	#  Cod 
-0 1 2  	#  Whiting 
+           3           3           3           2           7           5           1           1           2           2           2           2
+#  first ages in each group by species 
+1 2 3 	#  Cod 
+0 1 2 	#  Whiting 
 0 1 2 	#  Haddock 
 3 4 	#  Saithe 
 1 2 3 4 5 6 7 	#  Mackerel 
-0 1 2 3 4	#  Herring 
-0  1 	#  N.sandeel 
-0  1   #  S.sandeel 
+0 1 2 3 4 	#  Herring 
+0 	#  N.sandeel 
+0 	#  S.sandeel 
 0 1 	#  Nor.pout 
 1 2 	#  Sprat 
 1 2 	#  Plaice 
 1 2 	#  Sole 
-###########################
+########################################
 # catch observations: number of separate catch variance groups by species 
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           3           3           4           3           2           3         3           3          3           3           3           3
+           3           3           4           3           2           3           3           3           3           3           3           3
 #  first age group in each catch variance group 
-1 2 7  	#  Cod 
-0 1 2  	#  Whiting 
-0 1 2 6  	#  Haddock 
+1 2 7 	#  Cod 
+0 1 2 	#  Whiting 
+0 1 2 6 	#  Haddock 
 3 5 8 	#  Saithe 
-1 2 #  Mackerel 
+1 2 	#  Mackerel 
 0 1 8 	#  Herring 
 0 1 3 	#  N.sandeel 
-0 1 3	#  S.sandeel 
+0 1 3 	#  S.sandeel 
 0 1 3 	#  Nor.pout 
 1 2 3 	#  Sprat 
 1 2 3 	#  Plaice 
 1 2 3 	#  Sole 
-###########################
-### First age in separable model (in case of fModel==2), (option firstAgeYearEffect)
+########################################
+## First age in separable model (in case of fModel==2), (option firstAgeYearEffect))
 #          Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
              0           0           0           0           0           0           0           0           0           0           0           0 
 ########################################
-# number of age groups with the same age selection (used  in case of fModel==2)
+# number of age groups with the same age selection (used  in case of fModel==2) 
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           1           1           1           1           1           1         3          3           1           1           1           1
-#  first year in each group (option catch.sep.age)
-0	#  Cod 
+           1           1           1           1           1           1           3           3           1           1           1           1
+#  first age in each group (option catch.sep.age) 
+0 	#  Cod 
 0 	#  Whiting 
 0 	#  Haddock 
 0 	#  Saithe 
 0 	#  Mackerel 
 0 	#  Herring 
-0 1 3	#  N.sandeel 
+0 1 3 	#  N.sandeel 
 0 1 3 	#  S.sandeel 
-0	#  Nor.pout 
+0 	#  Nor.pout 
 0 	#  Sprat 
 0 	#  Plaice 
 0 	#  Sole 
-# number of year groups with the same age selection (used  in case of fModel==2)
+########################################
+# number of year groups with the same age selection (used  in case of fModel==2) 
 #         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           1           1           1           1           1           1           1          1           1           1           1           1
-#  first year in each group (catch.sep.year)
-1974	#  Cod 
-1974    #  Whiting 
+           1           1           1           1           1           1           1           1           1           1           1           1
+#  first year in each group (option catch.sep.year) 
+1974 	#  Cod 
+1974 	#  Whiting 
 1974 	#  Haddock 
 1974 	#  Saithe 
 1974 	#  Mackerel 
 1974 	#  Herring 
 1974 	#  N.sandeel 
 1974 	#  S.sandeel 
-1974	#  Nor.pout 
+1974 	#  Nor.pout 
 1974 	#  Sprat 
-1974	#  Plaice 
-1974	#  Sole 
-##
-
+1974 	#  Plaice 
+1974 	#  Sole 
 ########################################
-# Correlation in catches (exploitation pattern) between age group (option useRho) (1=use, 0, no use) 
-#         Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
-           1           1           0           0           1           1           0          0           0           0           1           1
+## Correlation in catches (exploitation pattern) between age group (option useRho) (1=use, 0=no use)
+#          Cod     Whiting     Haddock      Saithe    Mackerel     Herring   N.sandeel   S.sandeel    Nor.pout       Sprat      Plaice        Sole 
+             1           1           0           0           1           1           0           0           0           0           1           1 
 ########################################
 ## first and last age in calculation of average F by species (option avg.F.ages)
 2 4  # Cod 
@@ -251,5 +237,5 @@
 # default=0
 1
 ########################################
-###  Check value (must be  -999)
+## Check value, must be -999 
 -999
