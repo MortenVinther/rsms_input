@@ -28,7 +28,7 @@
 # 0=single species mode
 # 1=multi species mode, but Z=F+M (used for initial food suitability parm. est.)
 # 2=multi species mode, Z=F+M1+M2
-0
+2
 ########################################
 # Number of areas for multispecies run (default=1)
 1
