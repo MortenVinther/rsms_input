@@ -1,5 +1,5 @@
 # Combination of species x year x quarter with no catch
-# 0=no (or insignificant) catch, 1=catch data availeble
+# 0=no (or insignificant) catch, 1=catch data availeble, 2=all catches (taken over the full year) are assumed taken in the given quarter
 # Cod
 1 1 1 1 # 1974 
 1 1 1 1 # 1975 

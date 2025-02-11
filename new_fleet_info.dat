@@ -1,11 +1,11 @@
 # File for configuration of survey observations
-0.2  # minimum CV of CPUE observations
+0.1  # minimum CV of CPUE observations
 ### number of fleets by species
 2  #  Cod 
 2  #  Whiting 
 2  #  Haddock 
 2  #  Saithe 
-3  #  Mackerel 
+4  #  Mackerel 
 3  #  Herring 
 5  #  N.sandeel 
 3  #  S.sandeel 
@@ -129,7 +129,7 @@
    0 1 3 	 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
 #########   Saithe 
-##   Saithe # Fleet: 1 POK IBTS Q3   fleet 7 
+##   Saithe # Fleet: 1 POK IBTS Q3+4   fleet 7 
 1 		# Use the fleet
 1 		# Index type
 1992 2022 	# First and last year
@@ -161,7 +161,7 @@
 -999 		# check value (must be -999)
 #########   Mackerel 
 ##   Mackerel # Fleet: 1 MAC SSB-egg   fleet 9 
-1 		# Use the fleet
+1		# Use the fleet
 3 		# Index type
 1992 2022 	# First and last year
 3 		# Season for survey
@@ -176,7 +176,7 @@
    0 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
 ##   Mackerel # Fleet: 2 MAC Recruitment index   fleet 10 
-1 		# Use the fleet
+0 		# Use the fleet
 1 		# Index type
 1998 2022 	# First and last year
 3 		# Season for survey
@@ -190,8 +190,8 @@
 1 		# Number of variance of catchability groups
    0 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
-##   Mackerel # Fleet: 3 MAC Swept-idx   fleet 11 
-1 		# Use the fleet
+##   Mackerel # Fleet: 3 MAC Swept-idx   
+0 		# Use the fleet
 1 		# Index type
 2010 2022 	# First and last year
 3 		# Season for survey
@@ -204,6 +204,21 @@
    3 4 5 6 		 # First ages, catchability groups
 1 		# Number of variance of catchability groups
    3 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Mackerel # Fleet: 4 MAC Stock number with lnorm dist 0.3  error, age  1 - 9  timing: 0 0.01 
+1		# Use the fleet
+1 		# Index type
+1980 2022 	# First and last year
+1 		# Season for survey
+0 0 		# Alpha and beta
+1 9 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   1 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   1 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
 #########   Herring 
 ##   Herring # Fleet: 1 HER HERAS   fleet 12 
@@ -268,7 +283,7 @@
    0 1 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
 ##   N.sandeel # Fleet: 2 NSA Commercial 1983-1998   fleet 16 
-1 		# Use the fleet
+1		# Use the fleet
 5 		# Index type
 1983 2002 	# First and last year
 2 		# Season for survey
@@ -288,7 +303,7 @@
 2003 2022 	# First and last year
 2 		# Season for survey
 0 1 		# Alpha and beta
-1 1 		# First and last age
+1 1 		# First and last age REPLACED BY age rage for FBar FleetType==5
 0 		# Is last age a plus group (0=no, 1=yes)
 -9 		# Last age power model
 0 		# Technical creep
@@ -298,7 +313,7 @@
    1 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
 ##   N.sandeel # Fleet: 4 NSA Commercial old   fleet 18 
-0		# Use the fleet
+1		# Use the fleet
 1 		# Index type
 1976 2004 	# First and last year
 3 		# Season for survey
@@ -312,8 +327,8 @@
 1 		# Number of variance of catchability groups
    0 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
-##   N.sandeel # Fleet: 5 NSA acoustic SA 1R   fleet 19 
-1 		# Use the fleet
+##   N.sandeel # Fleet: 5 NSA acoustic SA 3R   fleet 19 
+0 		# Use the fleet
 1 		# Index type
 2009 2022 	# First and last year
 2 		# Season for survey

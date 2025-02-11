@@ -1,0 +1,83 @@
+# sms.dat option file
+# the character "#" is used as comment character, such that all text and numbers
+# after # are skipped by the SMS program
+#
+########################################
+# Produce test output (option test.output)
+#  0 no test output
+0
+########################################
+# Single/Multispecies mode (option VPA.mode)
+# 0=single species mode
+# 1=multi species mode, but Z=F+M (used for initial food suitability parm. est.)
+# 2=multi species mode, Z=F+M1+M2
+0
+#
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#
+# single species parameters
+#
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#
+## first year of input data (option first.year)
+1900
+########################################
+## first year used in the model (option first.year.model)
+1901
+########################################
+## last year of input data (option last.year)
+1901
+########################################
+## last year used in the model (option last.year.model)
+1901
+########################################
+##  number of seasons (option last.season). Use 1 for annual data
+1
+########################################
+## number of species (option no.species)
+1
+########################################
+# Species names, for information only. See file species_names.in 
+#  sp1 
+########################################
+# Species names.long, for information only. See file species_names_long.in 
+#  sp1 
+########################################
+## first age all species (option first.age)
+0
+########################################
+## recruitment season (option rec.season). Use 1 for annual data
+1
+########################################
+## maximum age for any species(max.age.all)
+0
+########################################
+## various information by species
+# 1. last age 
+# 2. first age where catch data are used (else F=0 assumed), First age if species is other predator
+# 3. plus group, 0=no plus group, 1=plus group
+# 4. predator species, 0=no, 1=VPA predator, 2=Other predator 
+# 5. prey species, 0=no, 1=yes
+# 6. Spawning season (not used yet, but set to 1)
+# 7. Additional data1
+# 8. additional data2
+# 9. additional data3
+##
+0 0 0 0 0 0 0 0 0  # 1 sp1 
+########################################
+# Stock Recruit relation
+#      0=random walk 1=Ricker, 2=Beverton & Holt, 3=Geom mean,
+#      4= Hockey stick, 5=hockey stick with smoother,
+#      >100= hockey stick with known breakpoint (given as input)
+#    sp1 
+       0 
+########################################
+## minimum CV of catch observation used in ML-estimation (option min.catch.CV)
+0.2
+########################################
+## use seasonal or annual catches(for input transformation only)(option combined.catches)
+#    0=annual catches in likelihood, with seasonal proportions of annual F at age derived from seasonal catch N / sum(all seasonal catch N)
+#    1=annual catches in likelihood, with seasonal proportions of annual F at age from number of seasons (1/nseasons)
+#    2=annual catches in likelihood with seasonal proportions of annual F at age from file proportion_of_annual_f.dat
+#    3=seasonal catch in likelihood with estimation of seasonal F from separable F-model 
+#    4=sum of seasonal catch in likelihood with estimation of seasonal F from separable F-model 
