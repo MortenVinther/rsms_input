@@ -312,8 +312,8 @@
 1 		# Number of variance of catchability groups
    1 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
-##   N.sandeel # Fleet: 4 NSA Commercial old   fleet 18 
-1		# Use the fleet
+##   N.sandeel # Fleet: 4 NSA Commercial old  0-group, fleet 18 
+0		# Use the fleet
 1 		# Index type
 1976 2004 	# First and last year
 3 		# Season for survey
@@ -328,7 +328,7 @@
    0 		 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
 ##   N.sandeel # Fleet: 5 NSA acoustic SA 3R   fleet 19 
-0 		# Use the fleet
+1 		# Use the fleet
 1 		# Index type
 2009 2022 	# First and last year
 2 		# Season for survey
@@ -522,7 +522,7 @@
 -9 		# Last age power model
 0 		# Technical creep
 5 		# Number of cathability groups
-   1 2 3 4 5 		 # First ages, catchability groups
+   1 2 3  5  7		 # First ages, catchability groups
 3 		# Number of variance of catchability groups
    1 2 3 	 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
@@ -536,8 +536,8 @@
 0 		# Is last age a plus group (0=no, 1=yes)
 -9 		# Last age power model
 0 		# Technical creep
-6 		# Number of cathability groups
-   1 2 3 4 5 6 		 # First ages, catchability groups
+5 		# Number of cathability groups
+   1 2 3 4  6 		 # First ages, catchability groups
 3 		# Number of variance of catchability groups
    1 3 5 	 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
@@ -551,8 +551,8 @@
 0 		# Is last age a plus group (0=no, 1=yes)
 -9 		# Last age power model
 0 		# Technical creep
-6 		# Number of cathability groups
-   1 2 3 4 5 6 		 # First ages, catchability groups
+5		# Number of cathability groups
+   1 2 3 4 6 		 # First ages, catchability groups
 3 		# Number of variance of catchability groups
    1 3 5 	 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
@@ -597,8 +597,8 @@
 0 		# Is last age a plus group (0=no, 1=yes)
 -9 		# Last age power model
 0 		# Technical creep
-5 		# Number of cathability groups
-   1 2 3 4 5 		 # First ages, catchability groups
+4		# Number of cathability groups
+   1 2  4 6 		 # First ages, catchability groups
 4 		# Number of variance of catchability groups
    1 2 5 7 	 # First ages, variance of catchahability at age
 -999 		# check value (must be -999)
