@@ -1,5 +1,6 @@
 .Rproj.user
 .Rhistory
+.Rdata
 .RData
 .Ruserdata
 *.exe
@@ -17,5 +18,5 @@
 details.out
 SMS.RData
 rsms_input_all.Rdata
-*/*
+/Sandeel_ICES
 
