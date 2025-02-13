@@ -47,7 +47,7 @@
 0
 ########################################
 ## recruitment season (option rec.season). Use 1 for annual data
-1
+3
 ########################################
 ## maximum age for any species(max.age.all)
 10
@@ -108,7 +108,7 @@
 #    3=seasonal catches in likelihood with estimation of seasonal F from separable F-model 
 #    4=annual catches in likelihood with estimation of seasonal F from separable F-model 
 #    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-       2     2     2     2     2     2     2     2     2     2     2     2 
+       1     1     1     1     1     2     2     2     2     2     1     1 
 ########################################
 ## Process noise: Include process noise (option incl.process.noise)
 #    1= Both recruits and older ages have process noise estimated
@@ -144,18 +144,18 @@
 #   1=random walk (deafult SAM)
 #   2=random walk used as year effect in separable F model for some or all ages
 #    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-       1     1     1     1     1     1     1     1     1     1     1     1 
+       2     1     1     1     1     2     1     1     1     1     2     2 
 ########################################
 # number of separate age groups for use for random walk F stages (option keyLogFsta) 
 #   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-      3     3     3     3     1     4     2     2     3     1     3     3
+      3     3     3     3     1     3     2     2     3     1     3     3
 #  first ages in each group by species 
 1 2 3 	#  COD 
 0 1 2 	#  WHG 
 0 1 2 	#  HAD 
 3 4 5 	#  POK 
 1 	#  MAC 
-0 1 2 4 	#  HER 
+0 1 2 	#  HER 
 0 1 	#  NSA 
 1 2 	#  SSA 
 0 1 2 	#  NOP 
@@ -165,41 +165,41 @@
 ########################################
 # catch observations: number of separate catch variance groups by species 
 #   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-      3     3     3     2     2     2     2     2     2     2     2     2
-#  first age group in each catch variance group 
+      3     3     3     2     2     3     2     2     2     2     3     3
+#  first age group in each catch variance group (option catch.s2.group) 
 1 2 4 	#  COD 
 0 1 3 	#  WHG 
 0 1 2 	#  HAD 
 3 4 	#  POK 
 1 2 	#  MAC 
-0 1 	#  HER 
+0 1 4 	#  HER 
 0 1 	#  NSA 
-0 1 	#  SSA 
+1 3 	#  SSA 
 0 1 	#  NOP 
 0 1 	#  SPR 
-0 1 	#  PLE 
-0 1 	#  SOL 
+0 1 5 	#  PLE 
+0 1 5 	#  SOL 
 ########################################
 ## First age in separable model (in case of fModel==2), (option firstAgeYearEffect))
 #    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-       0     0     0     0     0     0     0     0     0     0     0     0 
+       3     0     0     0     0     2     0     0     0     0     3     3 
 ########################################
 # number of age groups with the same age selection (used only in case of fModel==2) 
 #   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-      1     1     1     1     1     1     1     1     1     1     1     1
+      2     1     1     1     1     2     1     1     1     1     2     2
 #  first age in each group (option catch.sep.age) 
-0 	#  COD 
+3 6 	#  COD 
 0 	#  WHG 
 0 	#  HAD 
 0 	#  POK 
 0 	#  MAC 
-0 	#  HER 
+2 5 	#  HER 
 0 	#  NSA 
 0 	#  SSA 
 0 	#  NOP 
 0 	#  SPR 
-0 	#  PLE 
-0 	#  SOL 
+3 6 	#  PLE 
+3 6 	#  SOL 
 ########################################
 # number of year groups with the same age selection (used  in case of fModel==2) 
 #   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
