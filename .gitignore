@@ -1,6 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+.Rdata
 .Ruserdata
 *.exe
 *.cpp
@@ -17,5 +18,5 @@
 details.out
 SMS.RData
 rsms_input_all.Rdata
-*/*
+
 
