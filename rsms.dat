@@ -96,11 +96,11 @@
 #      4= Hockey stick, 5=hockey stick with smoother,
 #      6= hockey stick with known breakpoint (given as input in SSB.R.add )
 #    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-       6     2     2     2     2     2     2     2     2     2     2     2 
+       2     2     2     2     2     2     6     6     2     2     2     2 
 ########################################
 # Stock Recruit relation, additional information  (option SSB.R.add)
 #    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
-   8.6e+04     0     0     0     0     0     0     0     0     0     0     0 
+       0     0     0     0     0     0 1e+05 1e+05     0     0     0     0 
 ########################################
 ## minimum CV of catch observation used in ML-estimation (option min.catch.CV)
 0.1
