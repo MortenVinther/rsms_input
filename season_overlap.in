@@ -1,0 +1,172 @@
+# Predator prey overlap
+# a positive value is used as input value
+# a negative interger indicates that the factor will be estimated
+#  start using -1 for the first parameter, -2 for the next etc.
+#  you can use the same negative number to show that parameter to be estimated is the same
+# for each pred prey combination, you have to fix at least one overlap factor
+################################################################################################################################################
+# Predator COD
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+    1   1    1   1   1   1   1   1   1   1   1  1    1
+    1   1    1   1   1   1  -4  -4   1   1   1  1   -1
+    1   1    1   1   1   1  -4  -4   1   1   1  1   -1
+    1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator WHG
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL   OTH
+    1   1    1   1   1   1   1   1   1   1   1  1     1
+    1   1    1   1   1   1  -5  -5   1   1   1  1    -2
+    1   1    1   1   1   1  -5  -5   1   1   1  1    -2
+    1   1    1   1   1   1   1   1   1   1   1  1     1
+# Predator HAD
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL   OTH
+    1   1    1   1   1   1   1   1   1   1   1  1     1
+    1   1    1   1   1   1   1   1   1   1   1  1    -3
+    1   1    1   1   1   1   1   1   1   1   1  1    -3
+    1   1    1   1   1   1   1   1   1   1   1  1     1
+# Predator POK
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL   OTH
+     1   1    1   1   1   1   1   1   1   1   1  1     1
+     1   1    1   1   1   1   1   1   1   1   1  1     1
+     1   1    1   1   1   1   1   1   1   1   1  1     1
+     1   1    1   1   1   1   1   1   1   1   1  1     1
+# Predator MAC
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1  -6  -6   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator HER (not a predator , I know)
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator NSA (not a predator , I know)
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator SSA (not a predator , I know)
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator NOP (not a predator , I know)
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator SPR (not a predator , I know)
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator PLE (not a predator , I know)
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator SOL (not a predator , I know)
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+     1   1    1   1   1   1   1   1   1   1   1  1    1
+# Predator FUL
+# COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1  20  20   1   1   1  1   1
+   1   1    1   1   1   1  20  20   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator GLT
+# COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator HEG
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+
+# Predator KTW
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1  20  20   1   1   1  1   1
+    1   1    1   1   1   1  20  20   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator GBG
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+     1   1    1   1   1   1   1   1   1   1   1  1   1
+     1   1    1   1   1   1   1   1   1   1   1  1   1
+     1   1    1   1   1   1   1   1   1   1   1  1   1
+     1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator GNT
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1  20  20   1   1   1  1   1
+    1   1    1   1   1   1  20  20   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator PUF
+#  OD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator RAZ
+#   COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+     1   1    1   1   1   1   1   1   1   1   1  1   1
+     1   1    1   1   1   1  20  20   1   1   1  1   1
+     1   1    1   1   1   1  20  20   1   1   1  1   1
+     1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator RAJ
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator GUR
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+    1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator W_H
+# COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator N_H
+# COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+# Predator GSE
+# COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+#Predator HBP
+# COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL OTH
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+   1   1    1   1   1   1   1   1   1   1   1  1   1
+#Predator HKE
+#  COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL  OTH
+    1   1    1   1   1   1   1   1   1   1   1  1    1
+    1   1    1   1   1   1   1   1   1   1   1  1    1
+    1   1    1   1   1   1   1   1   1   1   1  1    1
+    1   1    1   1   1   1   1   1   1   1   1  1    1
+
+-999.0 # check

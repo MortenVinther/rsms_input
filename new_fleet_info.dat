@@ -1,0 +1,619 @@
+# File for configuration of survey observations
+0.1  # minimum CV of CPUE observations
+### number of fleets by species
+2  #  Cod 
+2  #  Whiting 
+2  #  Haddock 
+2  #  Saithe 
+4  #  Mackerel 
+3  #  Herring 
+5  #  N.sandeel 
+3  #  S.sandeel 
+4  #  Nor.pout 
+3  #  Sprat 
+6  #  Plaice 
+2  #  Sole 
+####### survey options ###### 
+ #      Fleet name
+ # 1:   Use the fleet asssessment, 1=yes, 0=no
+ # 2:   Index type and input:
+ #        1 = Effort and index catch in numbers by age;
+ #        2 = Effort and index for total exploitable biomass, (including all ages with F>0);
+ #        3 = Effort and index for toal spawning stock biomass;
+ #        4 = Commercial effort used with the assumption that Effort is a proxy for F at age;
+ #        5 = Commercial effort used with the assumption that Effort is a proxy for Fbar ;
+ # 3-4:  First and last year
+ # 5:    Season for survey, use 1 for annual data
+ # 6.7:  Alpha and beta - the start and end of the survey period for the fleet given as fractions of the season
+ #                  (or of the year if annual data are used)
+ # 8-9:  First and last age, use -1 if not relevant
+ # 10:    Last age is a plus group? (0=no, 1=yes)
+ # 11:   Last age for stock size dependent catchability (power model), -1 shows no ages uses power model
+ # 12:   Technical creep in effort (only used for type 4 index)
+ # 13:   Number  of cathability groups
+ #         First ages in group of ages  for estimates of catcahability at age
+ #       Number of variance of cathability groups
+ #         First ages in group of ages  for estimates of variance of catcahability at age
+ #       Check value (must be -999)
+ #################################   Cod 
+##   Cod # Fleet: 1 COD Quarter 1   fleet 1 
+1 		# Use the fleet
+1 		# Index type
+1983 2022 	# First and last year
+1 		# Season for survey
+0 1 		# Alpha and beta
+1 7 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+5 		# Number of cathability groups
+   1 2 3 4 5 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 2 3 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Cod # Fleet: 2 COD NS cod indices Q3 & Q4   fleet 2 
+1 		# Use the fleet
+1 		# Index type
+1992 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 7 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+6 		# Number of cathability groups
+   0 1 2 3 4 5 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   0 1 2 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Whiting 
+##   Whiting # Fleet: 1 WHG IBTS-Q1   fleet 3 
+1		# Use the fleet
+1 		# Index type
+1983 2022 	# First and last year
+1 		# Season for survey
+0 0 		# Alpha and beta
+1 5 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+3 		# Number of cathability groups
+   1 2 3 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   1 2 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Whiting # Fleet: 2 WHG IBTS-Q3   fleet 4 
+1 		# Use the fleet
+1 		# Index type
+1991 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 5 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+4 		# Number of cathability groups
+   0 1 2 3 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   0 1 2 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Haddock 
+##   Haddock # Fleet: 1 HAD delta-GAM NS-WC Q1   fleet 5 
+1 		# Use the fleet
+1 		# Index type
+1983 2022 	# First and last year
+1 		# Season for survey
+0 1 		# Alpha and beta
+1 8 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+5 		# Number of cathability groups
+   1 2 3 4 5 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   1 2 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Haddock # Fleet: 2 HAD delta-GAM NS-WC Q3+Q4   fleet 6 
+1 		# Use the fleet
+1 		# Index type
+1991 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 8 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+4 		# Number of cathability groups
+   0 1 2 3 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   0 1 3 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Saithe 
+##   Saithe # Fleet: 1 POK IBTS Q3+4   fleet 7 
+1 		# Use the fleet
+1 		# Index type
+1992 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+3 8 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+3 		# Number of cathability groups
+   3 4 5 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   3 5 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Saithe # Fleet: 2 POK Biomass Q3   fleet 8 
+1 		# Use the fleet
+2 		# Index type
+2000 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+3 3 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   3 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   3 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Mackerel 
+##   Mackerel # Fleet: 1 MAC SSB-egg   fleet 9 
+1		# Use the fleet
+3 		# Index type
+1992 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 0 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   0 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   0 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Mackerel # Fleet: 2 MAC Recruitment index   fleet 10 
+0 		# Use the fleet
+1 		# Index type
+1998 2022 	# First and last year
+3 		# Season for survey
+0 0 		# Alpha and beta
+0 0 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   0 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   0 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Mackerel # Fleet: 3 MAC Swept-idx   
+0 		# Use the fleet
+1 		# Index type
+2010 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+3 10 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+4 		# Number of cathability groups
+   3 4 5 6 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   3 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Mackerel # Fleet: 4 MAC Stock number with lnorm dist 0.3  error, age  1 - 9  timing: 0 0.01 
+1		# Use the fleet
+1 		# Index type
+1980 2022 	# First and last year
+1 		# Season for survey
+0 0 		# Alpha and beta
+1 9 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   1 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Herring 
+##   Herring # Fleet: 1 HER HERAS   fleet 12 
+1 		# Use the fleet
+1 		# Index type
+1989 2022 	# First and last year
+2 		# Season for survey
+0 1 		# Alpha and beta
+1 8 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+4 		# Number of cathability groups
+   1 2 3 4 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 2 3 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Herring # Fleet: 2 HER IBTS-Q1   fleet 13 
+1 		# Use the fleet
+1 		# Index type
+1984 2023 	# First and last year
+1 		# Season for survey
+0 0 		# Alpha and beta
+1 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   1 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Herring # Fleet: 3 HER IBTS0   fleet 14 
+1 		# Use the fleet
+1 		# Index type
+1992 2023 	# First and last year
+3 		# Season for survey
+0 0 		# Alpha and beta
+0 0 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   0 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   0 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   N.sandeel 
+##   N.sandeel # Fleet: 1 NSA dregde   fleet 15 
+1 		# Use the fleet
+1 		# Index type
+2004 2022 	# First and last year
+4 		# Season for survey
+0 1 		# Alpha and beta
+0 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+2 		# Number of cathability groups
+   0 1 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   0 1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   N.sandeel # Fleet: 2 NSA Commercial 1983-1998   fleet 16 
+0		# Use the fleet
+5 		# Index type
+1983 2002 	# First and last year
+2 		# Season for survey
+0 1 		# Alpha and beta
+1 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   1 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   N.sandeel # Fleet: 3 NSA Commercial 1999-2022   fleet 17 
+0		# Use the fleet
+5 		# Index type
+2003 2022 	# First and last year
+2 		# Season for survey
+0 1 		# Alpha and beta
+1 1 		# First and last age REPLACED BY age rage for FBar FleetType==5
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   1 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   N.sandeel # Fleet: 4 NSA Commercial old  0-group, fleet 18 
+0		# Use the fleet
+1 		# Index type
+1976 2004 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 0 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   0 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   0 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   N.sandeel # Fleet: 5 NSA acoustic SA 3R   fleet 19 
+1 		# Use the fleet
+1 		# Index type
+2009 2022 	# First and last year
+2 		# Season for survey
+0 0 		# Alpha and beta
+1 4 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+2 		# Number of cathability groups
+   1 3 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   1 3 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   S.sandeel 
+##   S.sandeel # Fleet: 1 SSA dregde   fleet 20 
+1 		# Use the fleet
+1 		# Index type
+2004 2022 	# First and last year
+4 		# Season for survey
+0 1 		# Alpha and beta
+0 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+2 		# Number of cathability groups
+   0 1 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   0 1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   S.sandeel # Fleet: 2 SSA Commercial 1983-2002   fleet 21 
+0 		# Use the fleet
+5 		# Index type
+1983 2002 	# First and last year
+2 		# Season for survey
+0 1 		# Alpha and beta
+1 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   1 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   S.sandeel # Fleet: 3 SSA Commercial 2003-2022   fleet 22 
+0 		# Use the fleet
+5 		# Index type
+2003 2022 	# First and last year
+2 		# Season for survey
+0 1 		# Alpha and beta
+1 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   1 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Nor.pout 
+##   Nor.pout # Fleet: 1 NOP EGFSQ3   fleet 23 
+1 		# Use the fleet
+1 		# Index type
+1992 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+2 		# Number of cathability groups
+   0 1 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   0 1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Nor.pout # Fleet: 2 NOP IBTSQ1   fleet 24 
+1 		# Use the fleet
+1 		# Index type
+1984 2023 	# First and last year
+1 		# Season for survey
+0 0 		# Alpha and beta
+1 3 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+3 		# Number of cathability groups
+   1 2 3 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   1 2 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Nor.pout # Fleet: 3 NOP IBTSQ3   fleet 25 
+1 		# Use the fleet
+1 		# Index type
+1991 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+2 3 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+2 		# Number of cathability groups
+   2 3 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   2 3 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Nor.pout # Fleet: 4 NOP SGFSQ3   fleet 26 
+1 		# Use the fleet
+1 		# Index type
+1998 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 1 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+2 		# Number of cathability groups
+   0 1 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   0 1 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Sprat 
+##   Sprat # Fleet: 1 SPR Acoustic   fleet 27 
+1 		# Use the fleet
+1 		# Index type
+2006 2022 	# First and last year
+2 		# Season for survey
+0 1 		# Alpha and beta
+1 3 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+3 		# Number of cathability groups
+   1 2 3 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   1 2 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Sprat # Fleet: 2 SPR IBTS Q1   fleet 28 
+1 		# Use the fleet
+1 		# Index type
+1983 2023 	# First and last year
+1 		# Season for survey
+0 0 		# Alpha and beta
+1 3 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+3 		# Number of cathability groups
+   1 2 3 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   1 2 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Sprat # Fleet: 3 SPR IBTS Q3   fleet 29 
+1 		# Use the fleet
+1 		# Index type
+1992 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+1 3 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+3 		# Number of cathability groups
+   1 2 3 		 # First ages, catchability groups
+2 		# Number of variance of catchability groups
+   1 2 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Plaice 
+##   Plaice # Fleet: 1 PLE BTS-Isis-early   fleet 30 
+1 		# Use the fleet
+1 		# Index type
+1985 1995 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+1 9 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+5 		# Number of cathability groups
+   1 2 3 4 5 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 3 5 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Plaice # Fleet: 2 PLE BTS IBTSQ3   fleet 31 
+1 		# Use the fleet
+1 		# Index type
+1996 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+1 10 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+5 		# Number of cathability groups
+   1 2 3  5  7		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 2 3 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Plaice # Fleet: 3 PLE IBTSQ1   fleet 32 
+1 		# Use the fleet
+1 		# Index type
+2007 2022 	# First and last year
+1 		# Season for survey
+0 1 		# Alpha and beta
+1 8 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+5 		# Number of cathability groups
+   1 2 3 4  6 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 3 5 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Plaice # Fleet: 4 PLE SNS1   fleet 33 
+1 		# Use the fleet
+1 		# Index type
+1974 1999 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+1 7 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+5		# Number of cathability groups
+   1 2 3 4 6 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 3 5 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Plaice # Fleet: 5 PLE SNS2   fleet 34 
+1 		# Use the fleet
+1 		# Index type
+2000 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+1 7 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+5 		# Number of cathability groups
+   1 2 3 4 5 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 3 5 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Plaice # Fleet: 6 PLE DYFS   fleet 35 
+1 		# Use the fleet
+1 		# Index type
+1990 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+0 0 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+1 		# Number of cathability groups
+   0 		 # First ages, catchability groups
+1 		# Number of variance of catchability groups
+   0 		 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+#########   Sole 
+##   Sole # Fleet: 1 SOL BTS   fleet 36 
+1 		# Use the fleet
+1 		# Index type
+1985 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+1 10 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+4		# Number of cathability groups
+   1 2  4 6 		 # First ages, catchability groups
+4 		# Number of variance of catchability groups
+   1 2 5 7 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)
+##   Sole # Fleet: 2 SOL SNS   fleet 37 
+1 		# Use the fleet
+1 		# Index type
+1974 2022 	# First and last year
+3 		# Season for survey
+0 1 		# Alpha and beta
+1 6 		# First and last age
+0 		# Is last age a plus group (0=no, 1=yes)
+-9 		# Last age power model
+0 		# Technical creep
+4 		# Number of cathability groups
+   1 2 3 4 		 # First ages, catchability groups
+3 		# Number of variance of catchability groups
+   1 2 4 	 # First ages, variance of catchahability at age
+-999 		# check value (must be -999)

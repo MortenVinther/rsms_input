@@ -1,0 +1,435 @@
+# sms.dat option file
+# the character "#" is used as comment character, such that all text and numbers
+# after # are skipped by the SMS program
+#
+########################################
+# Produce test output (option test.output)
+#  0 no test output
+0
+########################################
+# Single/Multispecies mode (option VPA.mode)
+# 0=single species mode
+# 1=multi species mode, but Z=F+M (used for initial food suitability parm. est.)
+# 2=multi species mode, Z=F+M1+M2
+0
+#
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#
+# single species parameters
+#
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#
+## first year of input data (option first.year)
+1974
+########################################
+## first year used in the model (option first.year.model)
+1974
+########################################
+## last year of input data (option last.year)
+2022
+########################################
+## last year used in the model (option last.year.model)
+2022
+########################################
+##  number of seasons (option last.season). Use 1 for annual data
+4
+########################################
+## number of species (option no.species)
+27
+########################################
+# Species names, for information only. See file species_names.in 
+#  FUL GLT HEG KTW GBG GNT PUF RAZ RAJ GUR WHM NHM GSE HBP HKE COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL 
+########################################
+# Species names.long, for information only. See file species_names_long.in 
+#  FUL GLT HEG KTW GBG GNT PUF RAZ RAJ GUR WHM NHM GSE HBP HKE COD WHG HAD POK MAC HER NSA SSA NOP SPR PLE SOL 
+########################################
+## first age all species (option first.age)
+0
+########################################
+## recruitment season (option rec.season). Use 1 for annual data
+3
+########################################
+## maximum age for any species(max.age.all)
+10
+########################################
+## various information by species
+# 1. last age 
+# 2. first age where catch data are used (else F=0 assumed), First age if species is other predator
+# 3. plus group, 0=no plus group, 1=plus group
+# 4. predator species, 0=no, 1=VPA predator, 2=Other predator 
+# 5. prey species, 0=no, 1=yes
+# 6. Spawning season (not used yet, but set to 1)
+# 7. Additional data1
+# 8. additional data2
+# 9. additional data3
+##
+1 0 1 2 0 1 0 0 0  # 1 FUL 
+1 0 1 2 0 1 0 0 0  # 2 GLT 
+1 0 1 2 0 1 0 0 0  # 3 HEG 
+1 0 1 2 0 1 0 0 0  # 4 KTW 
+1 0 1 2 0 1 0 0 0  # 5 GBG 
+1 0 1 2 0 1 0 0 0  # 6 GNT 
+1 0 1 2 0 1 0 0 0  # 7 PUF 
+1 0 1 2 0 1 0 0 0  # 8 RAZ 
+3 0 1 2 0 1 0 0 0  # 9 RAJ 
+4 0 1 2 0 1 0 0 0  # 10 GUR 
+3 0 1 2 0 1 0 0 0  # 11 WHM 
+6 0 1 2 0 1 0 0 0  # 12 NHM 
+1 0 1 2 0 1 0 0 0  # 13 GSE 
+1 0 1 2 0 1 0 0 0  # 14 HBP 
+9 0 1 2 0 1 0 0 0  # 15 HKE 
+10 1 1 1 1 1 0 0 0  # 16 COD 
+6 0 1 1 1 1 0 0 0  # 17 WHG 
+10 0 1 1 1 1 0 0 0  # 18 HAD 
+10 3 1 1 0 1 0 0 0  # 19 POK 
+10 1 1 1 0 1 0 0 0  # 20 MAC 
+8 0 1 0 1 1 0 0 0  # 21 HER 
+4 0 1 0 1 1 0 0 0  # 22 NSA 
+4 1 1 0 1 1 0 0 0  # 23 SSA 
+3 0 1 0 1 1 0 0 0  # 24 NOP 
+3 1 1 0 1 1 0 0 0  # 25 SPR 
+10 1 1 0 0 1 0 0 0  # 26 PLE 
+10 1 1 0 0 1 0 0 0  # 27 SOL 
+########################################
+# Stock Recruit relation (option SSB.R)
+#      0=random walk 1=Ricker, 2=Beverton & Holt, 3=Geom mean,
+#      4= Hockey stick, 5=hockey stick with smoother,
+#      6= hockey stick with known breakpoint (given as input in SSB.R.add )
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       2     2     2     2     2     2     6     6     2     2     2     2 
+########################################
+# Stock Recruit relation, additional information  (option SSB.R.add)
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       0     0     0     0     0     0 1e+05 1e+05     0     0     0     0 
+########################################
+## minimum CV of catch observation used in ML-estimation (option min.catch.CV)
+0.1
+########################################
+## use seasonal or annual catches(for input transformation only)(option combined.catches)
+#    0=annual catches in likelihood, with seasonal proportions of annual F at age derived from seasonal catch N / sum(all seasonal catch N)
+#    1=annual catches in likelihood, with seasonal proportions of annual F at age from number of seasons (1/nseasons)
+#    2=annual catches in likelihood with seasonal proportions of annual F at age from file proportion_of_annual_f.in
+#    3=seasonal catches in likelihood with estimation of seasonal F from separable F-model 
+#    4=annual catches in likelihood with estimation of seasonal F from separable F-model 
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       2     2     2     2     2     3     3     3     3     3     2     2 
+########################################
+## Process noise: Include process noise (option incl.process.noise)
+#    1= Both recruits and older ages have process noise estimated
+#    2= Recruits only (N at age older than recruits in the first year become parameters)
+#    3= Do not include process noise at all (N in the first year and recruits become parameters)
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       3     3     3     3     3     3     3     3     3     3     3     3 
+########################################
+# Process noise: number of age  groups with the same process N by species 
+#   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+      1     1     1     1     1     1     1     1     1     1     1     1
+#  first age in sd group (option keyVarLogN) 
+0 	#  COD 
+0 	#  WHG 
+0 	#  HAD 
+0 	#  POK 
+0 	#  MAC 
+0 	#  HER 
+0 	#  NSA 
+0 	#  SSA 
+0 	#  NOP 
+0 	#  SPR 
+0 	#  PLE 
+0 	#  SOL 
+########################################
+## Include stock-recruitment relation in log-likelihood (option incl.Ssb.R)
+#   0 = no
+#   1 = include the likelihood (only used in cases where recruitment is estimatede as a fixed parameter)
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       1     1     1     1     1     1     1     1     1     1     1     1 
+########################################
+## Model for F (default=1) (option fModel):
+#   1=random walk F (deafult SAM)
+#   2=random walk F used as year effect in separable F model for some or all ages
+#   3=year effect in separable F model is estimated as a fixed parameter
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       3     3     3     3     3     3     3     3     3     3     3     3 
+########################################
+# number of separate age groups for use for random walk F stages (option keyLogFsta) 
+#   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+      1     1     1     1     1     1     1     1     1     1     1     1
+#  first ages in each group by species 
+0 	#  COD 
+0 	#  WHG 
+0 	#  HAD 
+0 	#  POK 
+0 	#  MAC 
+0 	#  HER 
+0 	#  NSA 
+0 	#  SSA 
+0 	#  NOP 
+0 	#  SPR 
+0 	#  PLE 
+0 	#  SOL 
+########################################
+# catch observations: number of separate catch variance groups by species 
+#   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+      3     3     3     2     2     3     2     2     2     2     3     3
+#  first age group in each catch variance group (option catch.s2.group) 
+1 2 4 	#  COD 
+0 1 3 	#  WHG 
+0 1 2 	#  HAD 
+3 4 	#  POK 
+1 2 	#  MAC 
+0 1 4 	#  HER 
+0 1 	#  NSA 
+1 3 	#  SSA 
+0 1 	#  NOP 
+0 1 	#  SPR 
+0 1 5 	#  PLE 
+0 1 5 	#  SOL 
+########################################
+## First age in separable model (in case of fModel==2|3), (option firstAgeYearEffect))
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       1     0     0     3     1     0     0     1     0     1     1     1 
+########################################
+# number of age groups with the same age selection (used only in case of fModel==2|3) 
+#   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+      4     4     3     2     3     2     3     2     3     3     3     2
+#  first age in each group (option catch.sep.age) 
+1 2 3 5 	#  COD 
+0 1 2 3 	#  WHG 
+0 1 2 	#  HAD 
+3 4 	#  POK 
+1 2 4 	#  MAC 
+0 1 	#  HER 
+0 1 2 	#  NSA 
+1 2 	#  SSA 
+0 1 3 	#  NOP 
+1 2 3 	#  SPR 
+1 2 4 	#  PLE 
+1 3 	#  SOL 
+########################################
+# number of year groups with the same age selection (used  in case of fModel==2|3) 
+#   COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+      3     3     3     2     3     3     2     2     2     1     3     2
+#  first year in each group (option catch.sep.year) 
+1974 1993 2007 	#  COD 
+1974 1991 2007 	#  WHG 
+1974 1985 2000 	#  HAD 
+1974 1992 	#  POK 
+1974 1980 2004 	#  MAC 
+1974 1983 1998 	#  HER 
+1974 2005 	#  NSA 
+1974 2005 	#  SSA 
+1974 2003 	#  NOP 
+1974 	#  SPR 
+1974 1990 2007 	#  PLE 
+1974 1990 	#  SOL 
+########################################
+## Correlation in catches (exploitation pattern) between age group (option useRho) (0=no use, 1 compound symmetry, 2=AR(1))
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       0     0     0     0     0     0     0     0     0     0     0     0 
+########################################
+## first and last age in calculation of average F by species (option avg.F.ages)
+2 4  # COD 
+2 5  # WHG 
+2 4  # HAD 
+4 7  # POK 
+4 8  # MAC 
+2 6  # HER 
+1 2  # NSA 
+1 2  # SSA 
+1 2  # NOP 
+1 2  # SPR 
+2 6  # PLE 
+2 6  # SOL 
+########################################
+## Use proportion landed information in calculation of yield (option discard)
+#    0=all catches are included in yield
+#    1=yield is calculated from proportion landed (file proportion_landed.in)
+#    COD   WHG   HAD   POK   MAC   HER   NSA   SSA   NOP   SPR   PLE   SOL 
+       0     0     0     0     0     0     0     0     0     0     0     0 
+########################################
+## year season combinations with zero catch (F=0) (option zero.catch.year.season)
+# 0=no, all year-seasons have catches,
+# 1=yes there are year-season combinations with no catch.
+#   Read from file zero_catch_seasons_ages.in
+# default=0
+1
+########################################
+## season age combinations with zero catch (F=0) (option zero.catch.season.ages)
+# 0=no, all seasons have catches,
+# 1=yes there are seasons with no catch. Read from file zero_catch_season_ages.in
+# default=0
+1
+########################################
+## Check value, must be -999 
+-999
+########################################
+#
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#
+# multispecies parameters
+#
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#
+# Exclude year, season and predator combinations where stomach data are not included (option incl.stom.all),
+#(for input transformation only)(option incl.stom.all)
+#   0=no, all stomach data are used in likelihood
+#   1=yes there are combinations for which data are not included in the likelihood.
+#      Read from file: incl_stom.in
+#   default(0)
+0
+########################################
+##  N in the beginning of the period or N bar for calculation of M2 (option use.Nbar)
+#  0=use N in the beginning of the time step (default)
+#  1=use N bar
+0
+########################################
+## Maximum M2 iterations (option M2.iterations) in case of use.Nbar=1
+3
+########################################
+## convergence criteria (option max.M2.sum2) in case of use.Nbar=1
+#  use max.M2.sum2=0.0 and M2.iterations=7 (or another high number) to make Hessian
+0.001
+########################################
+# Variance used in likelihood model for stomach contents as prey weight proportion (option stomach.variance)
+#  1 = log normal distribution, 
+#  2 = normal distribution,
+#  3 = Dirichlet distribution (with estimation of alpha0 parameter from sampling level)
+#  4 = Dirichlet distribution (with input of alpha0 parameter)
+#  5 = Dirichlet distribution (from input of alpha0 and estimated scaling factor)
+#
+# by predator
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+       1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1 
+########################################
+## Usage of age-length-keys for calc of M2 (option simple.ALK))
+#  0=Use only one size group per age (file lsea.in or west.in)
+#  1=Use size distribution per age (file ALK_all.in)
+0
+########################################
+## Usage of food-rations from input values or from size and regression parameters (option consum)
+#(for input transformation only)
+#  0=Use input values by age (file consum.in)
+#  1=use weight at age (file west.in) and regression parameters (file consum_ab.in)
+#  2=use length at age (file lsea.in), l-w relation and regression parameters (file consum_ab.in)
+0
+########################################
+## Size selection model based on (option size.select.model)
+#  1=length:
+#      M2 calculation:
+#         Size preference:
+#           Predator length at age from file: lsea.in
+#           Prey     length at age from file: lsea.in
+#         Prey mean weight is weight in the sea from file: west.in
+#      Likelihood:
+#         Size preference:
+#           Predator mean length per length group (file: stom_pred_length_at_sizecl.in) 
+#           Prey mean length per ength group (file stomlen_at_length.in 
+#         Prey mean weight from mean weight per prey length group (file: stomweight_at_length.in 
+#  2=weight:
+#      M2 calculation:
+#         Size preference:
+#           Predator weight at age from file: west.in
+#           Prey     weight at age from file: west.in
+#         Prey mean weight is weight in the sea from file: west.in
+#      Likelihood:
+#         Size preference
+#           Predator mean weight is based on mean length per predator length group (file: stom_pred_length_at_sizecl.in)
+#              and l-w relation (file: length_weight_relations.in), 
+#           Prey mean weight per prey length group (file: stomweight_at_length.in) 
+#         Prey mean weight from mean weight per prey length group (file: stomweight_at_length.in 
+#  3=weight:
+#       M2 calculation: Same as option 2
+#       Likelihood:
+#         Size preference:
+#           Predator mean weight is based on mean length per predator length group (file: stom_pred_length_at_sizecl.in)
+#              and l-w relation (file: length_weight_relations.in), 
+#           Prey mean weight per prey length group (file: stomlen_at_length.in) and l-w relation (file:length_weight_relations.in)
+#         Prey mean weight from prey mean length per prey length group (file: stomlen_at_length.in) and l-w relation (file: length_weight_relations.in) 
+#  4=weight:
+#       M2 calculation:
+#         Size preference:
+#           Predator mean weight from file lsea.in (length in the sea) and l-w relation (file: length_weight_relations.in) 
+#           Prey mean weight from file lsea.in (length in the sea) and l-w relation (file: length_weight_relations.in) 
+#       Likelihood:  Same as option 3
+#  5=weight in combination with simple.ALK=1:
+#       M2 calculation:
+#         Size preference:
+#           Predator weight based on length from file ALK_all.in (length distribution at age) and l-w relation (file: length_weight_relations.in) 
+#           Prey     weight based on length from file ALK_all.in (length distribution at age) and l-w relation (file: length_weight_relations.in) 
+#         Prey mean weight based on length from file ALK_all.in (length distribution at age) and l-w relation (file: length_weight_relations.in) 
+#       Likelihood: Same as for option 2
+#  6=weight in combination with simple.ALK=1:
+#       M2 calculation: Same as option 5
+#       Likelihood: Same as option 3
+2
+########################################
+## spread of size selection (option size.selection)
+#   0=no size selection, predator/preys size range defined from observations (and optional percentile range) 
+#   1=normal distribution size selection
+#   3=Gamma distribution size distribution
+#   5=Beta distributed size distribution, within observed size range
+#   6=log-Beta size distributed, within observed size range
+#
+# by predator
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+       0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 
+########################################
+## percentile range of log(prey siz/ predator size) used for calculation of M2 (option size.range.lower and size.range.upper)
+#  Upper and lower quantile (in percentage)
+# by predator
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+       0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+     100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100 
+########################################
+## sum stomach contents over prey size for use in likelihood for prey weight proportions (option sum.stom.like)
+#   0=no, use observations as they are
+#    1=yes, sum observed and predicted stomach contents before used in likelihood for prey weight proportions
+#
+# by predator
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+       1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1 
+########################################
+## # Upper limit for Dirichlet sumP. A low value (e.g. 10) limits the risk of overfitting. A high value (e.g. 100) allows a full fit. (option stom.max.sumP)
+# by predator
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+     100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100 
+########################################
+## other food suitability size dependency  (option size.other.food.suit)
+#  0=no size dependency
+#  1=yes, other food suitability is different for different size classes
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+       0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0 
+########################################
+## Minimum observed relative stomach contents weight for inclusion in ML estimation (option min.stom.cont)
+ # a negative value will delete the observation if observation<abs(value), a positivee will change the observation to the limit value
+#(for input transformation only)
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+   0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 0.0001 
+########################################
+## Upper limit for no of samples used for calculation of stomach observation variance (option max.stom.sampl)
+#(for input transformation only)
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+    1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000  1000 
+########################################
+## Max prey size/ pred size factor for inclusion in M2 calc (option prey.pred.size.fac)
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+     0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5   0.5 
+########################################
+## inclusion of individual stomach contents observations in ML for weight proportions (option stom.type.include)
+#(for input transformation only)
+# 1=Observed data
+# 2= + (not observed) data within the observed size range (=fill in)
+# 3= + (not observed) data outside an observed size range. One obs below and one above (=tails)
+# 4= + (not observed) data for the full size range of a prey species irrespective of predator size (=expansion)
+#    FUL   GLT   HEG   KTW   GBG   GNT   PUF   RAZ   RAJ   GUR   WHM   NHM   GSE   HBP   HKE   COD   WHG   HAD   POK   MAC 
+       1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1 
+########################################
+## use overlap input values by year and season (use.overlap)
+#   0: overlap assumed constant or estimated within the model 
+#   1: overlap index from file overlap.in (assessment only, use overlap from last year in forecast)
+#   2: overlap index from file overlap.in (assessment and forecast)
+0
+########################################
+## Check value, must be -999 
+-999
